@@ -41,7 +41,7 @@ var config_data = `
       "type": "team",
       "min": 1,
       "max": 999999
-    },
+    }
   ],
   "auton": [
     { "name": "Auton Scoring",
