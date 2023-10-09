@@ -1,14 +1,14 @@
 var config_data = `
 {
-  "title": "Scouting PASS 2023",
-  "page_title": "Charged Up",
-  "checkboxAs": "10",
+  "title": "Scouting PASS 2023-24 FTC edition",
+  "page_title": "Centerstage",
+  "checkboxAs": "10", 
   "prematch": [
     { "name": "Scouter Name",
       "code": "s",
-      "type": "scouter",
+      "type": "text",
       "size": 5,
-      "maxSize": 10,
+      "maxSize": 15,
       "required": "true"
     },
     { "name": "Event",
@@ -17,17 +17,6 @@ var config_data = `
       "defaultValue": "2023mirr",
       "required": "true",
       "disabled": "true"
-    },
-    { "name": "Match Level",
-      "code": "l",
-      "type": "level",
-      "choices": {
-        "qm": "Quals<br>",
-        "de": "Double Elimination<br>",
-        "f": "Finals"
-      },
-      "defaultValue": "qm",
-      "required": "true"
     },
     { "name": "Match #",
       "code": "m",
@@ -43,9 +32,7 @@ var config_data = `
         "r1": "Red-1",
         "b1": "Blue-1<br>",
         "r2": "Red-2",
-        "b2": "Blue-2<br>",
-        "r3": "Red-3",
-        "b3": "Blue-3"
+        "b2": "Blue-2<br>"
       },
       "required":"true"
     },
@@ -53,12 +40,8 @@ var config_data = `
       "code": "t",
       "type": "team",
       "min": 1,
-      "max": 99999
+      "max": 999999
     },
-    { "name": "Is their robot<br>on the field?",
-      "code": "as",
-      "type": "bool"
-	}
   ],
   "auton": [
     { "name": "Auton Scoring",
