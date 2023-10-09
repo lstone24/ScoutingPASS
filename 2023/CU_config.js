@@ -42,7 +42,7 @@ var config_data = `
 	  "choices": {
 		  "qm": "Qualification<br>",
 		  "el": "Elimination"
-	  }
+	  },
 	  "defaultValue": "qm"
 	},
     { "name": "Team #",
@@ -57,7 +57,7 @@ var config_data = `
 	  "choices": {
 		  "px": "Pixel",
 		  "tp": "Team Prop"
-	  }
+	  },
 	  "defaultValue": "px"
 	}
   ],
