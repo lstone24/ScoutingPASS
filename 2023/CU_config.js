@@ -6,7 +6,7 @@ var config_data = `
   "prematch": [
     { "name": "Scouter Name",
       "code": "s",
-      "type": "text",
+      "type": "scouter",
       "size": 5,
       "maxSize": 15,
       "required": "true"
@@ -25,7 +25,7 @@ var config_data = `
       "max": 100,
       "required": "true"
     },
-    { "name": "Alliance Station",
+    { "name": "Team Position",
       "code": "r",
       "type": "robot",
       "choices": {
@@ -36,12 +36,30 @@ var config_data = `
       },
       "required":"true"
     },
+	{ "name": "Match Level",
+	  "code": "l",
+	  "type": "level",
+	  "choices": {
+		  "qm": "Qualification<br>"
+		  "el": "Elimination"
+	  }
+	  "defaultValue": "qm",
+	}
     { "name": "Team #",
       "code": "t",
       "type": "team",
       "min": 1,
       "max": 999999
-    }
+    },
+	{ "name": "Staring piece",
+	  "code": "as",
+	  "type": "radio",
+	  "choices": {
+		  "px": "Pixel",
+		  "tp": "Team Prop"
+	  }
+	  "defaultValue": "px"
+	}
   ],
   "auton": [
     { "name": "Auton Scoring",
