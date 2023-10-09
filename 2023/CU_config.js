@@ -40,10 +40,10 @@ var config_data = `
 	  "code": "l",
 	  "type": "level",
 	  "choices": {
-		  "qm": "Qualification<br>"
+		  "qm": "Qualification<br>",
 		  "el": "Elimination"
 	  }
-	  "defaultValue": "qm",
+	  "defaultValue": "qm"
 	}
     { "name": "Team #",
       "code": "t",
