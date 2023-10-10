@@ -61,8 +61,7 @@ var config_data = `
 	  "choices": {
 		  "px": "Pixel",
 		  "tp": "Team Prop"
-	  },
-	  "defaultValue": "px"
+	  }
 	}
   ],
   "auton": [
