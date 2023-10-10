@@ -1,14 +1,14 @@
 var config_data = `
 {
-  "title": "Scouting PASS 2023-24 FTC edition",
-  "page_title": "Centerstage",
-  "checkboxAs": "10", 
+  "title": "Scouting PASS 2023",
+  "page_title": "Charged Up",
+  "checkboxAs": "10",
   "prematch": [
     { "name": "Scouter Name",
       "code": "s",
       "type": "scouter",
       "size": 5,
-      "maxSize": 15,
+      "maxSize": 10,
       "required": "true"
     },
     { "name": "Event",
@@ -18,15 +18,17 @@ var config_data = `
       "required": "true",
       "disabled": "true"
     },
-	{ "name": "Match Level",
-	  "code": "l",
-	  "type": "level",
-	  "choices": {
-		  "qm": "Qualification<br>",
-		  "el": "Elimination"
-	  },
-	  "defaultValue": "qm"
-	},
+    { "name": "Match Level",
+      "code": "l",
+      "type": "level",
+      "choices": {
+        "qm": "Quals<br>",
+        "de": "Double Elimination<br>",
+        "f": "Finals"
+      },
+      "defaultValue": "qm",
+      "required": "true"
+    },
     { "name": "Match #",
       "code": "m",
       "type": "match",
@@ -34,27 +36,28 @@ var config_data = `
       "max": 100,
       "required": "true"
     },
-    { "name": "Team Position",
+    { "name": "Alliance Station",
       "code": "r",
       "type": "robot",
       "choices": {
         "r1": "Red-1",
         "b1": "Blue-1<br>",
         "r2": "Red-2",
-        "b2": "Blue-2<br>"
+        "b2": "Blue-2<br>",
+        "r3": "Red-3",
+        "b3": "Blue-3"
       },
-      "required": "true"
+      "required":"true"
     },
     { "name": "Team #",
       "code": "t",
       "type": "team",
       "min": 1,
-      "max": 999999
-	  "required": "true"
+      "max": 99999
     },
-	{ "name": "Staring piece",
-	  "code": "as",
-	  "type": "radio",
+    { "name": "Is their robot<br>on the field?",
+      "code": "as",
+      "type": "radio",
 	  "choices": {
 		  "px": "Pixel",
 		  "tp": "Team Prop"
