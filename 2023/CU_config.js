@@ -18,6 +18,15 @@ var config_data = `
       "required": "true",
       "disabled": "true"
     },
+	{ "name": "Match Level",
+	  "code": "l",
+	  "type": "level",
+	  "choices": {
+		  "qm": "Qualification<br>",
+		  "el": "Elimination"
+	  },
+	  "defaultValue": "qm"
+	},
     { "name": "Match #",
       "code": "m",
       "type": "match",
@@ -36,20 +45,12 @@ var config_data = `
       },
       "required": "true"
     },
-	{ "name": "Match Level",
-	  "code": "l",
-	  "type": "level",
-	  "choices": {
-		  "qm": "Qualification<br>",
-		  "el": "Elimination"
-	  },
-	  "defaultValue": "qm"
-	},
     { "name": "Team #",
       "code": "t",
       "type": "team",
       "min": 1,
       "max": 999999
+	  "required": "true"
     },
 	{ "name": "Staring piece",
 	  "code": "as",
