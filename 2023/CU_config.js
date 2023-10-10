@@ -55,13 +55,18 @@ var config_data = `
       "min": 1,
       "max": 99999
     },
-    { "name": "Is their robot<br>on the field?",
-      "code": "as",
-      "type": "radio",
+	{ "name": "Are they using<br>a pixel or team prop?",
+	  "code": "spi",
+	  "type": "radio",
 	  "choices": {
 		  "px": "Pixel",
 		  "tp": "Team Prop"
 	  }
+	  "defaultValue": "px"
+	},
+    { "name": "Is their robot<br>on the field?",
+      "code": "as",
+      "type": "bool"
 	}
   ],
   "auton": [
