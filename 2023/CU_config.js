@@ -38,9 +38,9 @@ var config_data = `
       "code": "r",
       "type": "robot",
       "choices": {
-        "r1": "Red backdrop		",
+        "r1": "Red backdrop",
         "b1": "Blue backdrop<br>",
-        "r2": "Red landing zone	",
+        "r2": "Red landing zone",
         "b2": "Blue landing zone<br>"
       },
       "required":"true"
