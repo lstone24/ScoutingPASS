@@ -110,7 +110,7 @@ var config_data = `
 		  "l3": "Third line"
 	  },
 	  "defaultValue": 0
-    },
+    }
   ],
   "endgame": [
     { "name": "Final Position",
