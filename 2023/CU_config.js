@@ -111,6 +111,7 @@ var config_data = `
 	  },
 	  "defaultValue": 0
     },
+],
   "endgame": [
     { "name": "Final Position",
       "code": "fp",
