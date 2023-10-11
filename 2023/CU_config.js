@@ -66,36 +66,27 @@ var config_data = `
 	}
   ],
   "auton": [
-    { "name": "Auton Scoring",
-      "code": "asg",
-      "type": "clickable_image",
-      "filename": "2023/grid_image.png",
-      "dimensions": "9 4",
-      "clickRestriction": "onePerBox",
-      "toggleClick": "true",
-      "showFlip": "false",
-      "showUndo": "false",
-      "shape": "circle 12 black red true"
-    },
-    { "name": "Dropped Game Pieces",
-      "code": "adp",
-      "type": "counter"
-    },
-	{ "name": "Crossed the<br>Community Line",
-      "code": "am",
-      "type": "bool"
-    },
-    { "name": "Docked",
-      "code": "ad",
-      "type":"radio",
-      "choices": {
-        "d": "Docked (not Engaged)<br>",
-        "e": "Engaged<br>",
-        "a": "Attempted but failed<br>",
-        "x": "Not attempted"
-      },
-      "defaultValue": "x"
-    }
+    { "name": "Did the robot park<br>in the Backstage?",
+	  "code": "prk",
+	  "type": "bool"
+	},
+	{ "name": "Purple pixel on<br>randomized line",
+	  "code": "plr",
+	  "type": "bool"
+	},
+	{ "name": "Yellow pixel on<br>correct Backdrop position",
+	  "code": "ybr",
+	  "type": "bool"
+	},
+	{ "name": "All pixels in the Backdrop",
+	  "code": "abd",
+	  "type": "counter"
+	  "defaultValue": 0
+	},
+	{ "name": "All pixels in the Backstage",
+	  "code": "abs",
+	  "type": "counter"
+	}
   ],
   "teleop": [
     { "name": "Grid Scoring",
