@@ -38,7 +38,7 @@ var config_data = `
       "code": "r",
       "type": "robot",
       "choices": {
-        "r1": "Red backdrop          ",
+        "r1": "Red backdrop",
         "b1": "Blue backdrop<br>",
         "r2": "Red landing zone",
         "b2": "Blue landing zone<br>"
@@ -80,94 +80,62 @@ var config_data = `
 	},
 	{ "name": "All pixels they placed<br>in the Backdrop",
 	  "code": "abd",
-	  "type": "counter",
-	  "defaultValue": 0
+	  "type": "counter"
 	},
 	{ "name": "All pixels they placed<br>in the Backstage",
 	  "code": "abs",
-	  "type": "counter",
-	  "defaultValue": 0
+	  "type": "counter"
 	}
   ],
   "teleop": [
     { "name": "Pixel's placed on<br>Backdrop in teleop",
 	  "code": "tbd",
-	  "type": "counter",
+	  "type": "counter"
+    },
+    { "name": "Pixels placed in<br>Backstage in teleop",
+      "code": "tbs",
+      "type": "counter"
+    },
+    { "name": "Mosaics count",
+      "code": "tm",
+      "type": "counter"
+    },
+    { "name": "Lines crossed on<br>the backdrop",
+      "code": "bdl",
+      "type": "radio",
+	  "choices": {
+		  "l0": "No lines",
+		  "l1": "First line",
+		  "l2": "Second line",
+		  "l3": "Third line"
+	  },
 	  "defaultValue": 0
     },
-    { "name": "Feeder Count<br>(Fed another bot)",
-      "code": "tfc",
-      "type": "counter"
-    },
-    { "name": "Was Fed<br>Game Pieces",
-      "code": "wf",
-      "type": "bool"
-    },
-    { "name": "If defended, who defended this bot<br>(if not defended, leave blank)",
-      "code": "who",
-      "type": "text"
-    },
-	{ "name": "Picks up from<br>double substation table",
-	  "code": "dss",
-	  "type": "bool"
-	},
-    { "name": "Can pick up cones<br>from any orientation",
-      "code": "cao",
-      "type": "bool"
-	},
-    { "name": "Floor Pickup",
-      "code": "fpu",
-      "type": "radio",
-      "choices": {
-        "o": "Cones<br>",
-        "u": "Cubes<br>",
-        "b": "Both<br>",
-        "x": "Not Attempted"
-      },
-      "defaultValue": "x"
-    }
-  ],
   "endgame": [
     { "name": "Final Position",
-      "code": "fs",
+      "code": "fp",
       "type":"radio",
       "choices": {
-        "p": "Parked<br>",
-        "d": "Docked (Not Engaged)<br>",
-        "e": "Engaged<br>",
-        "a": "Attempted but failed<br>",
-        "x": "Not attempted"
+        "p": "Parked in the Backstage<br>",
+        "s": "Suspended from the rigging",
+		"a": "Attempted suspension",
+		"x": "No special position"
       },
       "defaultValue": "x"
     },
-    { "name": "If docked/engaged, total # of alliance<br>robots docked/engaged",
-      "code": "dn",
-      "type": "counter"
-    },
-    { "name": "Did they knock their alliance<br>partners off the charge station?",
-      "code": "kop",
-      "type": "bool"
+    { "name": "Drone launch zone",
+      "code": "dlz",
+      "type": "radio",
+	  "choices": {
+		  "z0": "No drone launch",
+		  "z1": "Zone 1",
+		  "z2": "Zone 2",
+		  "z3": "Zone 3"
+	  },
+	  "defaultValue": "z0"
     }
   ],
   "postmatch": [
-    { "name": "Defense Rating",
-      "code": "dr",
-      "type": "radio",
-      "choices": {
-        "b": "Below Average (the thought was there)<br>",
-        "a": "Average (got in the way from time to time)<br>",
-        "g": "Good (was very annoying)<br>",
-        "e": "Excellent (An absolute menace)<br>",
-        "x": "Did not play defense"
-      },
-      "defaultValue": "x"
-    },
-	{ "name": "Who did they play<br>defense against?",
-      "code": "wda",
-      "type": "text",
-      "size": 15,
-      "maxSize": 100
-    },
     { "name": "Died/Immobilized",
       "code": "die",
       "type": "bool"
@@ -176,10 +144,14 @@ var config_data = `
       "code": "tip",
       "type": "bool"
     },
-    { "name": "Dropped Cones (>2)",
-      "code": "dc",
+    { "name": "Dropped Pixel (>4)",
+      "code": "dp",
       "type": "bool"
     },
+	{ "name": "Many penalties? (noticable)",
+	  "code": "p",
+	  "type": "bool"
+	},
     { "name": "Comments",
       "code": "co",
       "type": "text",
