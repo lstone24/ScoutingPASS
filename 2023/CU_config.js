@@ -38,10 +38,10 @@ var config_data = `
       "code": "r",
       "type": "robot",
       "choices": {
-        "r1": "Red backdrop",
+        "r1": "Red backdrop<br>",
         "b1": "Blue backdrop<br>",
-        "r2": "Red landing zone",
-        "b2": "Blue landing zone"
+        "r2": "Red landing zone<br>",
+        "b2": "Blue landing zone<br>"
       },
       "required":"true"
     },
@@ -78,14 +78,15 @@ var config_data = `
 	  "code": "ybr",
 	  "type": "bool"
 	},
-	{ "name": "All pixels in the Backdrop",
+	{ "name": "All pixels they placed<br>in the Backdrop",
 	  "code": "abd",
-	  "type": "counter"
+	  "type": "counter",
 	  "defaultValue": 0
 	},
-	{ "name": "All pixels in the Backstage",
+	{ "name": "All pixels they placed<br>in the Backstage",
 	  "code": "abs",
-	  "type": "counter"
+	  "type": "counter",
+	  "defaultValue": 0
 	}
   ],
   "teleop": [
