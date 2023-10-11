@@ -1,30 +1,28 @@
 var config_data = `
 {
-  "title": "Scouting PASS 2023",
-  "page_title": "Charged Up",
+  "title": "Scouting PASS 2023-24 FTC edition",
+  "page_title": "Centerstage",
   "checkboxAs": "10",
   "prematch": [
     { "name": "Scouter Name",
       "code": "s",
       "type": "scouter",
       "size": 5,
-      "maxSize": 10,
+      "maxSize": 15,
       "required": "true"
     },
     { "name": "Event",
       "code": "e",
       "type": "event",
       "defaultValue": "2023mirr",
-      "required": "true",
-      "disabled": "true"
+      "required": "true"
     },
     { "name": "Match Level",
       "code": "l",
       "type": "level",
       "choices": {
-        "qm": "Quals<br>",
-        "de": "Double Elimination<br>",
-        "f": "Finals"
+        "qm": "Qualifications<br>",
+        "de": "Eliminations"
       },
       "defaultValue": "qm",
       "required": "true"
@@ -43,9 +41,7 @@ var config_data = `
         "r1": "Red-1",
         "b1": "Blue-1<br>",
         "r2": "Red-2",
-        "b2": "Blue-2<br>",
-        "r3": "Red-3",
-        "b3": "Blue-3"
+        "b2": "Blue-2"
       },
       "required":"true"
     },
