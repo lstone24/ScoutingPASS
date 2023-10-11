@@ -90,16 +90,10 @@ var config_data = `
 	}
   ],
   "teleop": [
-    { "name": "Grid Scoring",
-      "code": "tsg",
-      "type": "clickable_image",
-      "filename": "2023/grid_image.png",
-      "dimensions": "9 4",
-      "clickRestriction": "onePerBox",
-      "toggleClick": "true",
-      "showFlip": "false",
-      "showUndo": "false",
-      "shape": "circle 12 black red true"
+    { "name": "Pixel's placed on<br>Backdrop in teleop",
+	  "code": "tbd",
+	  "type: "counter",
+	  "defaultValue": 0
     },
     { "name": "Feeder Count<br>(Fed another bot)",
       "code": "tfc",
