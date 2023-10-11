@@ -92,7 +92,7 @@ var config_data = `
   "teleop": [
     { "name": "Pixel's placed on<br>Backdrop in teleop",
 	  "code": "tbd",
-	  "type: "counter",
+	  "type": "counter",
 	  "defaultValue": 0
     },
     { "name": "Feeder Count<br>(Fed another bot)",
