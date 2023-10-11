@@ -104,9 +104,9 @@ var config_data = `
       "code": "bdl",
       "type": "radio",
 	  "choices": {
-		  "l0": "No lines",
-		  "l1": "First line",
-		  "l2": "Second line",
+		  "l0": "No lines<br>",
+		  "l1": "First line<br>",
+		  "l2": "Second line<br>",
 		  "l3": "Third line"
 	  },
 	  "defaultValue": 0
@@ -118,8 +118,8 @@ var config_data = `
       "type":"radio",
       "choices": {
         "p": "Parked in the Backstage<br>",
-        "s": "Suspended from the rigging",
-		"a": "Attempted suspension",
+        "s": "Suspended from the rigging<br>",
+		"a": "Attempted suspension<br>",
 		"x": "No special position"
       },
       "defaultValue": "x"
@@ -128,9 +128,9 @@ var config_data = `
       "code": "dlz",
       "type": "radio",
 	  "choices": {
-		  "z0": "No drone launch",
-		  "z1": "Zone 1",
-		  "z2": "Zone 2",
+		  "z0": "No drone launch<br>",
+		  "z1": "Zone 1<br>",
+		  "z2": "Zone 2<br>",
 		  "z3": "Zone 3"
 	  },
 	  "defaultValue": "z0"
@@ -145,7 +145,7 @@ var config_data = `
       "code": "tip",
       "type": "bool"
     },
-    { "name": "Dropped Pixel (>4)",
+    { "name": "Dropped Pixels (>4)",
       "code": "dp",
       "type": "bool"
     },
