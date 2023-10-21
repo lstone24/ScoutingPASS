@@ -41,9 +41,9 @@ var config_data = `
 		"r1": "Red backdrop",
         "b1": "Blue backdrop<br>",
         "r2": "Red landing zone",
-        "b2": "Blue landing zone<br>"
-        "r3": "test",
-		"b3": "testy"
+        "b2": "Blue landing zone<br>",
+        "r3": " ",
+		"b3": " "
 	  },
 	  "required": "true"
     },
