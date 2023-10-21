@@ -10,9 +10,9 @@ var authKey = "uTHeEfPigDp9huQCpLNkWK7FBQIb01Qrzvt4MAjh9z2WQDkrsvNE77ch6bOPvPb6"
 function getTeams(eventCode) {
 	if (authKey) {
 		var xmlhttp = new XMLHttpRequest();
-		var url = "https://www.theorangealliance.org/api/event/" + eventCode + "/teams";
+		var url = "https://www.thebluealliance.com/api/v3/event/" + eventCode + "/teams/simple";
 		xmlhttp.open("GET", url, true);
-		xmlhttp.setRequestHeader("X-TOA-Key", authKey);
+		xmlhttp.setRequestHeader("X-TBA-Auth-Key", authKey);
 		xmlhttp.onreadystatechange = function() {
 			if (this.readyState == 4 && this.status == 200) {
 				var response = this.responseText;
@@ -32,9 +32,9 @@ function getTeams(eventCode) {
 function getSchedule(eventCode) {
 	if (authKey) {
 		var xmlhttp = new XMLHttpRequest();
-		var url = "https://www.theorangealliance.org/api/event/" + eventCode + "/teams";
+		var url = "https://www.thebluealliance.com/api/v3/event/" + eventCode + "/teams/simple";
 		xmlhttp.open("GET", url, true);
-		xmlhttp.setRequestHeader("X-TOA-Key", authKey);
+		xmlhttp.setRequestHeader("X-TBA-Auth-Key", authKey);
 		xmlhttp.onreadystatechange = function() {
 			if (this.readyState == 4 && this.status == 200) {
 				var response = this.responseText;

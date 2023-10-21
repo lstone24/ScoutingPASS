@@ -38,11 +38,12 @@ var config_data = `
       "code": "r",
       "type": "robot",
       "choices": {
-        "r1": "Red 1,
-        "b1": "Blue 1<br>",
-        "r2": "Red 2",
-        "b2": "Blue 2<br>"
-      }
+		"r1": "Red backdrop",
+        "b1": "Blue backdrop<br>",
+        "r2": "Red landing zone",
+        "b2": "Blue landing zone<br>"
+      },
+	  "required": "true"
     },
     { "name": "Team #",
       "code": "t",
