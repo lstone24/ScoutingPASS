@@ -43,7 +43,7 @@ var config_data = `
         "r2": "Red landing zone",
         "b2": "Blue landing zone<br>"
         "r3": " ",
-		"b3": " ",
+		"b3": " "
 	  },
 	  "required": "true"
     },
