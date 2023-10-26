@@ -98,10 +98,6 @@ var config_data = `
       "code": "tbs",
       "type": "counter"
     },
-    { "name": "Mosaics count",
-      "code": "tm",
-      "type": "counter"
-    },
     { "name": "Lines crossed on<br>the backdrop",
       "code": "bdl",
       "type": "radio",
