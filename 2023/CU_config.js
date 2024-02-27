@@ -1,30 +1,27 @@
 var config_data = `
 {
-  "title": "Scouting PASS 2023",
-  "page_title": "Charged Up",
+  "title": "Scouting PASS 2023-24 FTC edition",
+  "page_title": "Centerstage",
   "checkboxAs": "10",
   "prematch": [
-    { "name": "Scouter Initials",
+    { "name": "Scouter Name",
       "code": "s",
       "type": "scouter",
       "size": 5,
-      "maxSize": 5,
+      "maxSize": 15,
       "required": "true"
     },
     { "name": "Event",
       "code": "e",
       "type": "event",
-      "defaultValue": "2022carv",
-      "required": "true",
-      "disabled": "true"
+      "required": "true"
     },
     { "name": "Match Level",
       "code": "l",
       "type": "level",
       "choices": {
-        "qm": "Quals<br>",
-        "de": "Double Elimination<br>",
-        "f": "Finals"
+        "qm": "Qualifications<br>",
+        "de": "Eliminations"
       },
       "defaultValue": "qm",
       "required": "true"
@@ -36,18 +33,18 @@ var config_data = `
       "max": 100,
       "required": "true"
     },
-    { "name": "Robot",
+    { "name": "Robot Position",
       "code": "r",
       "type": "robot",
       "choices": {
-        "r1": "Red-1",
-        "b1": "Blue-1<br>",
-        "r2": "Red-2",
-        "b2": "Blue-2<br>",
-        "r3": "Red-3",
-        "b3": "Blue-3"
-      },
-      "required":"true"
+		"r1": "Red backdrop",
+        "b1": "Blue backdrop<br>",
+        "r2": "Red landing zone",
+        "b2": "Blue landing zone<br>",
+        "r3": " ",
+		"b3": " "
+	  },
+	  "required": "true"
     },
     { "name": "Team #",
       "code": "t",
@@ -55,166 +52,88 @@ var config_data = `
       "min": 1,
       "max": 99999
     },
-    { "name": "Auto Start Position",
+	{ "name": "Are they using<br>a pixel or team prop?",
+	  "code": "spi",
+	  "type": "radio",
+	  "choices": {
+		  "px": "Pixel",
+		  "tp": "Team Prop"
+	  },
+	  "defaultValue": "px"
+	},
+    { "name": "Is their robot<br>on the field?",
       "code": "as",
-      "type": "clickable_image",
-      "filename": "2023/field_image.png",
-      "clickRestriction": "one",
-      "shape": "circle 5 black red true"
-    }
+      "type": "bool"
+	}
   ],
   "auton": [
-    { "name": "Auto Scoring",
-      "code": "asg",
-      "type": "clickable_image",
-      "filename": "2023/grid_image.png",
-      "dimensions": "9 4",
-      "clickRestriction": "onePerBox",
-      "toggleClick": "true",
-      "showFlip": "false",
-      "showUndo": "false",
-      "shape": "circle 12 black red true"
-    },
-    { "name": "Crossed Cable",
-      "code": "acc",
-      "type": "bool"
-    },
-    { "name": "Crossed Charging Station",
-      "code": "acs",
-      "type": "bool"
-    },
-    { "name": "Mobility?",
-      "code": "am",
-      "type": "bool"
-    },
-    { "name": "Docked",
-      "code": "ad",
-      "type":"radio",
-      "choices": {
-        "d": "Docked (not Engaged)<br>",
-        "e": "Engaged<br>",
-        "a": "Attempted but failed<br>",
-        "x": "Not attempted"
-      },
-      "defaultValue": "x"
-    }
+    { "name": "Did the robot park<br>in the Backstage?",
+	  "code": "prk",
+	  "type": "bool"
+	},
+	{ "name": "Purple pixel on<br>randomized line",
+	  "code": "plr",
+	  "type": "bool"
+	},
+	{ "name": "Yellow pixel on<br>correct Backdrop position",
+	  "code": "ybr",
+	  "type": "bool"
+	},
+	{ "name": "All pixels they placed<br>in the Backdrop",
+	  "code": "abd",
+	  "type": "counter"
+	},
+	{ "name": "All pixels they placed<br>in the Backstage",
+	  "code": "abs",
+	  "type": "counter"
+	}
   ],
   "teleop": [
-    { "name": "Cycle Timer",
-      "code": "tct",
-      "type": "cycle"
+    { "name": "Pixel's placed on<br>Backdrop in teleop",
+	  "code": "tbd",
+	  "type": "counter"
     },
-    { "name": "Grid Scoring",
-      "code": "tsg",
-      "type": "clickable_image",
-      "filename": "2023/grid_image.png",
-      "dimensions": "9 4",
-      "clickRestriction": "onePerBox",
-      "toggleClick": "true",
-      "showFlip": "false",
-      "showUndo": "false",
-      "shape": "circle 12 black red true",
-      "cycleTimer": "tct"
+    { "name": "Pixels placed in<br>Backstage in teleop",
+      "code": "tbs",
+      "type": "counter"
     },
-    { "name": "Feeder Count<br>(Fed another bot)",
-      "code": "tfc",
-      "type": "counter",
-      "cycleTimer": "tct"
-    },
-    { "name": "Was Fed<br>Game Pieces",
-      "code": "wf",
-      "type": "bool"
-    },
-    { "name": "Was Defended",
-      "code": "wd",
-      "type": "bool"
-    },
-    { "name": "Who Defended this bot",
-      "code": "who",
-      "type": "text"
-    },
-    { "name": "Smart Placement<br>(creates Links)",
-      "code": "lnk",
-      "type": "bool"
-    },
-    { "name": "Floor Pickup",
-      "code": "fpu",
+    { "name": "Lines crossed on<br>the backdrop",
+      "code": "bdl",
       "type": "radio",
-      "choices": {
-        "o": "Cones<br>",
-        "u": "Cubes<br>",
-        "b": "Both<br>",
-        "x": "Not Attempted"
-      },
-      "defaultValue": "x"
+	  "choices": {
+		  "l0": "No lines<br>",
+		  "l1": "First line<br>",
+		  "l2": "Second line<br>",
+		  "l3": "Third line"
+	  },
+	  "defaultValue": 0
     }
   ],
   "endgame": [
-    { "name": "Docking Timer",
-      "code": "dt",
-      "type": "timer"
-    },
-    { "name": "Final Status",
-      "code": "fs",
+    { "name": "Final Position",
+      "code": "fp",
       "type":"radio",
       "choices": {
-        "p": "Parked<br>",
-        "d": "Docked (Not Engaged)<br>",
-        "e": "Engaged<br>",
-        "a": "Attempted but failed<br>",
-        "x": "Not attempted"
+        "p": "Parked in the Backstage<br>",
+        "s": "Suspended from the rigging<br>",
+		"a": "Attempted suspension<br>",
+		"x": "No special position"
       },
       "defaultValue": "x"
     },
-    { "name": "Total # of alliance<br>robots docked/engaged",
-      "code": "dn",
-      "type": "counter"
+    { "name": "Drone launch zone",
+      "code": "dlz",
+      "type": "radio",
+	  "choices": {
+		  "z0": "No drone launch<br>",
+		  "z1": "Zone 1<br>",
+		  "z2": "Zone 2<br>",
+		  "z3": "Zone 3"
+	  },
+	  "defaultValue": "z0"
     }
   ],
   "postmatch": [
-    { "name": "Driver Skill",
-      "code": "ds",
-      "type": "radio",
-      "choices": {
-        "n": "Not Effective<br>",
-        "a": "Average<br>",
-        "v": "Very Effective<br>",
-        "x": "Not Observed"
-      },
-      "defaultValue": "x"
-    },
-    { "name": "Links Scored",
-      "code": "ls",
-      "type": "counter"
-    },
-    { "name": "Defense Rating",
-      "code": "dr",
-      "type": "radio",
-      "choices": {
-        "b": "Below Average<br>",
-        "a": "Average<br>",
-        "g": "Good<br>",
-        "e": "Excellent<br>",
-        "x": "Did not play defense"
-      },
-      "defaultValue": "x"
-    },
-    { "name": "Swerve drive?",
-      "code": "sd",
-      "type": "bool"
-    },
-    { "name": "Speed Rating",
-      "code": "sr",
-      "type": "radio",
-      "choices": {
-        "1": "1 (slow)<br>",
-        "2": "2<br>",
-        "3": "3<br>",
-        "4": "4<br>",
-        "5": "5 (fast)"
-      },
-      "defaultValue":"3"
-    },
     { "name": "Died/Immobilized",
       "code": "die",
       "type": "bool"
@@ -223,20 +142,19 @@ var config_data = `
       "code": "tip",
       "type": "bool"
     },
-    { "name": "Dropped Cones (>2)",
-      "code": "dc",
+    { "name": "Dropped Pixels (>4)",
+      "code": "dp",
       "type": "bool"
     },
-    { "name": "Make good<br>alliance partner?",
-      "tooltip": "Would you want this robot on your alliance in eliminations?",
-      "code": "all",
-      "type": "bool"
-    },
+	{ "name": "Many penalties? (noticable)",
+	  "code": "p",
+	  "type": "bool"
+	},
     { "name": "Comments",
       "code": "co",
       "type": "text",
       "size": 15,
-      "maxSize": 50
+      "maxSize": 100000
     }
   ]
 }`;
